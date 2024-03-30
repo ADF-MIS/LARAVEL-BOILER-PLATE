@@ -1,11 +1,13 @@
-#Simple one package solution starter kit
+# Simple one package solution starter kit
 Support MVC & Repository Service Pattern
 
-##Specific Version :
+## Specific Version :
 Laravel Version	Package Version
-|        9        |    1.x     |
+| Laravel Version | Package Version   |
+| ----------------|-------------------|
+|        9        |    1.x            |
 
-##What is included inside this boiler plate:
+## What is included inside this boiler plate:
 Package:
 - "fruitcake/laravel-cors": "^2.0.5"
 - "guzzlehttp/guzzle": "^7.2"
@@ -25,18 +27,18 @@ Package:
 Template:
 - "AdminLTE v3.2.0"
 
-##Requirement
+## Requirement
 - Minimum PHP ^8.0
 - Installation with composer
 
-##Installation
+## Installation
 You can install via composer for latest version:
 replace example-app with the name your app
 ```bash
 composer create-project ADF-MIS/laravel-boiler-plate:^1.0 example-app
 ```
 
-##Repository Pattern
+## Repository Pattern
 You can also create only the repository, or service, or both with artisan.
 
 Create repository:
@@ -73,7 +75,7 @@ Create service for api template
 php artisan make:service UserService --api
 ```
 
-##JWT Auth Implementation
+## JWT Auth Implementation
 Generate Secret Key:
 this command will generate 
 JWT_SECRET=(random value) on your .env file
@@ -82,9 +84,11 @@ php artisan jwt:secret
 ```
 For full implementation guide see on this link: https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
 
-
-Changelog
+## Changelog
 Please see CHANGELOG for more information on what has changed recently.
 
-License
+## Authors
+see Authors for information contributors on this repository
+
+## License
 The MIT License (MIT). Please see License File for more information.
