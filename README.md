@@ -92,11 +92,5 @@ php artisan jwt:secret
 ```
 For full implementation guide see on this link: https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
 
-## Changelog
-Please see CHANGELOG for more information on what has changed recently.
-
-## Authors
-see Authors for information contributors on this repository
-
 ## License
 The MIT License (MIT). Please see License File for more information.
