@@ -43,7 +43,7 @@ Template:
 You can install via composer for latest version:
 replace example-app with the name your app
 ```bash
-composer create-project ADF-MIS/laravel-boiler-plate:^1.0 example-app
+composer create-project adf-mis/laravel-boiler-plate:^1.0 example-app
 ```
 
 ## Repository Pattern
