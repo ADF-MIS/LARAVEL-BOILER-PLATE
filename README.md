@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-# Simple project stater kit
+# Simple project starter kit
 Support MVC & Repository Service Pattern
 
 ## Specific Version :
