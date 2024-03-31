@@ -6,14 +6,14 @@
   <br>
 </h1>
 
-# Simple one package solution starter kit
+# Simple project stater kit
 Support MVC & Repository Service Pattern
 
 ## Specific Version :
-Laravel Version	Package Version
-| Laravel Version | Package Version   |
-| ----------------|-------------------|
-|        9        |    1.x            |
+Laravel Version	Kit Version
+| Laravel Version | Kit Version   |
+| ----------------|---------------|
+|        9        |    1.x        |
 
 ## What is included inside this boiler plate:
 Package:
@@ -43,54 +43,16 @@ Template:
 You can install via composer for latest version:
 replace example-app with the name your app
 ```bash
+composer create-project adf-mis/laravel-boiler-plate example-app
+```
+
+Install spesific version release:
+```
 composer create-project adf-mis/laravel-boiler-plate:^1.0 example-app
 ```
 
-## Repository Pattern
-You can also create only the repository, or service, or both with artisan.
-
-Create repository:
-```bash
-php artisan make:repository User
-```
-or
-```bash
-php artisan make:repository UserRepository
-```
-
-Create repository together with a service:
-```bash
-php artisan make:repository User --service
-```
-or
-```bash
-php artisan make:repository UserRepository --service
-```
-Create a service separately
-```bash
-php artisan make:service User
-```
-or
-```bash
-php artisan make:service UserService
-```
-or
-```bash
-php artisan make:service UserService --repository
-```
-Create service for api template
-```bash
-php artisan make:service UserService --api
-```
-
-## JWT Auth Implementation
-Generate Secret Key:
-this command will generate 
-JWT_SECRET=(random value) on your .env file
-```bash
-php artisan jwt:secret
-```
-For full implementation guide see on this link: https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+## Documentation
+Please see [LARAVEL BOILER PLATE WIKI](https://github.com/ADF-MIS/LARAVEL-BOILER-PLATE/wiki)
 
 ## License
 The MIT License (MIT). Please see License File for more information.
