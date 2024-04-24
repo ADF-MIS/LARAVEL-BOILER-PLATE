@@ -2,8 +2,11 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -27,15 +30,30 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    public function register()
+    protected function unauthenticated($request, AuthenticationException $exception): JsonResponse
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        Log::error($exception->getMessage());
+        if (! $request->expectsJson()) {
+            return route('login');
+        }
+        return response()->json([
+            'message' => 'Unauthenticated',
+        ], 401);
+    }
+
+    public function register(): void
+    {
+        $this->renderable(function (Throwable $e) {
+            Log::error($e->getMessage());
+            if ($e instanceof AuthenticationException) {
+                return response()->json([
+                    'message' => 'Unauthenticated'
+                ], 401);
+            } else {
+                return response([
+                    'message' => "Oops, an error has occurred, we'll be up and running shortly. if you need immediate help, please call us"
+                ], 500);
+            }
         });
     }
 }
