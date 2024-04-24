@@ -6,8 +6,8 @@
   <br>
 </h1>
 
-# Simple project starter kit
-Support MVC & Repository Service Pattern
+# Simple project stater kit
+Support MVC & Repository With Service Pattern
 
 ## Specific Version :
 Laravel Version	Kit Version
@@ -50,6 +50,29 @@ Install spesific version release:
 ```
 composer create-project adf-mis/laravel-boiler-plate:^1.0 example-app
 ```
+
+After the project installed, install the package inside the project folder:
+```
+composer install
+composer dump-autoload
+```
+
+Generate App Key: 
+```
+php artisan key:generate
+```
+
+Generate JWT Secret (Optional):
+```
+php artisan jwt:secret
+```
+
+Re optimize for refresh the configuration:
+```
+php artisan optimize:clear
+```
+
+
 
 ## Documentation
 Please see [LARAVEL BOILER PLATE WIKI](https://github.com/ADF-MIS/LARAVEL-BOILER-PLATE/wiki)
